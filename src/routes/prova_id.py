@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException
 from sqlalchemy.orm import Session
 from sqlmodel import select
-from src.config.database import get_session
-from src.models.provas_model import Provas
-from src.models.resultados_model import Resultados
+from config.database import get_session
+from models.provas_model import Provas
+from models.resultados_model import Resultados
 
-provas_router = APIRouter(prefix="/provas")
+provas_router_id = APIRouter(prefix="/provas")
 
-@provas_router.delete("/{id}")
+@provas_router_id.delete("/{id}")
 def deleta_prova(id: int):
     with get_session() as session:
         statement = select(Resultados).where(Resultados.prova_id == id)

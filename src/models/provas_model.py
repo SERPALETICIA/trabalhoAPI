@@ -16,4 +16,4 @@ class Provas(SQLModel, table=True):
     q8: str
     q9: str
     q10: str
-    resultados: List["resultados"] = Relationship(back_populates="provas")
+    resultados: List["Resultados"] = Relationship(back_populates="provas")

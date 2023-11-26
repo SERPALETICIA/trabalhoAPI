@@ -1,5 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "./aps01-api-rest-postgres"
-    ]
-}

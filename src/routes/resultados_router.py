@@ -1,8 +1,8 @@
 from fastapi import APIRouter
 from sqlmodel import select
-from src.config.database import get_session
-from src.models.provas_model import Provas
-from src.models.resultados_model import Resultados
+from config.database import get_session
+from models.provas_model import Provas
+from models.resultados_model import Resultados
 
 resultados_router = APIRouter(prefix="/resultados")
 

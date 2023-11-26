@@ -6,8 +6,8 @@ from sqlmodel import SQLModel, Session, create_engine
 # connect_args = {"check_same_thread": False}
 # db_url = f"sqlite:///{sqlite_filename}"
 
-PG_USERNAME = "root"
-PG_PASSWORD = "postgres"
+PG_USERNAME = "postgres"
+PG_PASSWORD = "123"
 PG_HOST = "localhost"
 PG_PORT = 5432
 PG_DATABASE = "oficina"

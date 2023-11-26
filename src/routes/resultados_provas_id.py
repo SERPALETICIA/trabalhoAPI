@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from sqlmodel import select
-from src.config.database import get_session
-from src.models.provas_model import Provas
-from src.models.resultados_model import Resultados
+from config.database import get_session
+from models.provas_model import Provas
+from models.resultados_model import Resultados
 
-resultados_router = APIRouter(prefix="/resultados_provas")
+resultados_router_id = APIRouter(prefix="/resultados_provas")
 
-@resultados_router.get("/{prova_id}")
+@resultados_router_id.get("/{prova_id}")
 def get_resultados_prova(prova_id: int):
     with get_session() as session:
         prova = session.get(Provas, prova_id)
